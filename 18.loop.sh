@@ -8,11 +8,11 @@ G="\e[32m"
 Y="\e[33m"
 N="\e[0m"
 
-logs_folder="/var/log/shell-script"
+log_folder="/var/log/shell-script"
 script_name=$(echo $0 | cut -d "." -f1)
-log_file="$logs_folder/$script_name.log"
+log_file="$log_folder/$script_name.log"
 
-mkdir -p $logs_folder
+mkdir -p $log_folder
 pack=( "mysql" "python3" "nginx")
 #checks user id
 if [ $USERID -eq 0 ]
